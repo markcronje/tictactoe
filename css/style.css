@@ -12,11 +12,15 @@ body {
 
 
 #board {
-  border-style: solid;
-  border-color: white;
+  border-style: none;
+  /*border-color: white;*/
   width: 600px;
   height: 600px;
-  margin: 0 auto
+  margin: 0 auto;
+  font-size: 160px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .row-0, .row-1, .row-2 {
@@ -25,10 +29,22 @@ body {
   height: 200px;
   border-style: dotted;
   margin: 0 auto;
-  text-align: center;
+  /*text-align: center;*/
   display:flex;
+}
+
+#scoreTotal {
+  text-align: left;
+  border-radius: 50%;
+  border-color: white;
+  padding-left: 50px;
 
 }
+
+#scoreTotal.score {
+    text-decoration: underline;
+}
+
 
 .column {
   width: 200px;
@@ -37,10 +53,14 @@ body {
   border-style: dotted;
   display: inline-block;
   /*margin: 0 auto;*/
-  text-align: center;
+  /*text-align: center;*/
+
 }
 
-.appear {
-
-
+button {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 10%;
 }
