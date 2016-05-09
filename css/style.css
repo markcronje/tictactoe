@@ -1,0 +1,46 @@
+* {
+  font-family: 'Inconsolata';
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin:  0 auto;
+  background-color: black;
+}
+
+
+#board {
+  border-style: solid;
+  border-color: white;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto
+}
+
+.row-0, .row-1, .row-2 {
+  width: 600px;
+  border-color: white;
+  height: 200px;
+  border-style: dotted;
+  margin: 0 auto;
+  text-align: center;
+  display:flex;
+
+}
+
+.column {
+  width: 200px;
+  height: 200px;
+  border-color: white;
+  border-style: dotted;
+  display: inline-block;
+  /*margin: 0 auto;*/
+  text-align: center;
+}
+
+.appear {
+
+
+}
