@@ -4,6 +4,7 @@ $(function() {
     // creating turn symbol
     var turnSymbol = 'X';
 
+    var myDataRef = new Firebase('https://zkydehzjcuy.firebaseio-demo.com/');
 
 
     // creating a loop to automate the process of creating a table of 3 rows by 3 columns using $jQuery$
@@ -34,6 +35,18 @@ $(function() {
         }
     });
 
+
+  // audio files for incorporation inton
+    var audio = new Audio('media/win.mp3');
+    var audioDraw =  new Audio(('media/draw.mp3'));
+    // var winningImage = $('board');
+    //  (this).append(image)
+
+    var showCup = function() {
+      $(".inGame").css("display", "block");
+      $("#board").css("display", "none");
+    }
+
     var winningCombo = function() {
         var b1 = $('.row-0 .0').text();
         var b2 = $('.row-0 .1').text();
@@ -54,35 +67,52 @@ $(function() {
         }
 
         if (b1 + b2 + b3 === "XXX" || b1 + b2 + b3 === "OOO") {
+            audio.play();
             alert(winner + " has won");
-            resetGame();
+            showCup();
         }
         if (b1 + b4 + b7 === 'XXX' || b1 + b4 + b7 === "OOO") {
+            audio.play();
             alert(winner + " has won");
-            resetGame();
+            showCup();
         }
         if (b1 + b4 + b7 === 'XXX' || b1 + b4 + b7 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b4 + b5 + b6 === 'XXX' || b4 + b5 + b6 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b2 + b5 + b8 === 'XXX' || b2 + b5 + b8 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b3 + b6 + b9 === 'XXX' || b3 + b6 + b9 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b7 + b8 + b9 === 'XXX' || b7 + b8 + b9 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b1 + b5 + b9 === 'XXX' || b1 + b5 + b9 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b3 + b5 + b7 === 'XXX' || b3 + b5 + b7 === "OOO") {
+            audio.play();
             alert(winner + " has won");
+            showCup();
         }
         if (b1 != '' && b2 != '' && b3 != '' && b4 != '' && b5 != '' && b6 != '' && b7 != '' && b8 != '' && b9 != '') {
+            audioDraw.play();
             alert("Its a draw!!!");
 
         }
@@ -98,9 +128,11 @@ $(function() {
         var b7 = $('.row-2 .0').text("");
         var b8 = $('.row-2 .1').text("");
         var b9 = $('.row-2 .2').text("");
+        $("#board").css("display", "block");
+        $(".inGame").css("display", "none");
       }
 
-$('button.reset').click(resetGame);
+$('#reset').on('click', resetGame);
 
 
 // $('button.computer').click(function(){

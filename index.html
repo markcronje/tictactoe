@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 
 
     <title> Tic Tac Toe </title>
@@ -22,12 +23,17 @@
 
 
  <div id="mode">
-   <button type="button" name="reset" class="btn black waves-effect waves-purple"> New Game</button>
+   <button type="button" id="reset" class="btn black waves-effect waves-purple"> New Game</button>
    <button type="button" name="newGame" class="btn black waves-effect waves-purple"> Play Computer </button>
  </div>
   <div id="difficulty">
   <button type="button" name="newGame" class="btn black waves-effect waves-purple"> Easy E</button>
   <button type="button" name="newGame" class="btn black waves-effect waves-purple"> Hard af </button>
+</div>
+
+<div class="inGame">
+  <!-- <img src="http://i.imgur.com/r9Zntsk.png" alt="" /> -->
+  <img src="http://i2.kym-cdn.com/photos/images/facebook/000/048/783/a_winner_is_you20110724-22047-1nd3wif.jpg" alt="">
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
