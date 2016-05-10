@@ -4,11 +4,14 @@
   box-sizing: border-box;
 }
 
+
 body {
   text-align: center;
   margin:  0 auto;
   background-color: black;
 }
+
+
 
 
 #board {
@@ -17,11 +20,31 @@ body {
   width: 600px;
   height: 600px;
   margin: 0 auto;
-  font-size: 160px;
+  font-size: 140px;
   color: white;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 25px;
 }
+
+
+.score {
+  text-align: left;
+  border-color: white;
+  padding-left: 50px;
+  position: absolute;
+  top: 130px;
+  left: 5px;
+}
+
+.X{
+  top: 150px;
+}
+
+.Y{
+  top: 170px;
+}
+
 
 .row-0, .row-1, .row-2 {
   width: 600px;
@@ -32,19 +55,6 @@ body {
   /*text-align: center;*/
   display:flex;
 }
-
-#scoreTotal {
-  text-align: left;
-  border-radius: 50%;
-  border-color: white;
-  padding-left: 50px;
-
-}
-
-#scoreTotal.score {
-    text-decoration: underline;
-}
-
 
 .column {
   width: 200px;
@@ -58,9 +68,20 @@ body {
 }
 
 button {
-  background-color: white;
-  color: black;
-  font-size: 20px;
-  border: 2px solid red;
-  border-radius: 10%;
+  width: 10%;
+}
+
+
+#mode {
+  text-align: center;
+  font-size: 12px;
+  margin:  0 auto;
+  /*margin-bottom: -5px;*/
+
+}
+
+#difficulty {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
 }
