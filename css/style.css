@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   text-align: center;
   margin:  0 auto;
@@ -30,7 +29,6 @@ body {
   padding-bottom: 25px;
 }
 
-
 .score {
   text-align: left;
   border-color: white;
@@ -44,7 +42,7 @@ body {
   top: 150px;
 }
 
-.Y{
+.O{
   top: 170px;
 }
 
@@ -71,7 +69,7 @@ body {
 }
 
 button {
-  width: 10%;
+  width: 15%;
 }
 
 
@@ -80,6 +78,13 @@ button {
   font-size: 12px;
   margin:  0 auto;
   /*margin-bottom: -5px;*/
+}
+
+#computerMode {
+    text-align: center;
+    font-size: 12px;
+    margin:  0 auto;
+    /*margin-bottom: -5px;*/
 
 }
 
