@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
+
 body {
   text-align: center;
   margin:  0 auto;
   background-color: black;
+  font-size: 15px;
 }
+
+.intro {
+  font-size: 25px;
+}
+
 
 .inGame {
   opacity: 100;
@@ -69,7 +76,11 @@ body {
 }
 
 button {
-  width: 15%;
+  width: 20%;
+}
+
+#computerMode {
+  font-size: 12px;
 }
 
 
