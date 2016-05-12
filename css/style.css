@@ -1,0 +1,155 @@
+* {
+  font-family: 'Inconsolata';
+  color: white;
+  box-sizing: border-box;
+}
+
+
+body {
+  text-align: center;
+  margin:  0 auto;
+  background-color: black;
+  font-size: 15px;
+}
+
+.intro {
+  font-size: 25px;
+}
+
+.winHeading {
+  font-size: 25px;
+  color: purple;
+
+
+}
+
+.blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2, start);
+}
+@keyframes blink {
+    80% {
+        visibility: hidden;
+    }
+}
+
+
+.inGame {
+  opacity: 100;
+  display: none;
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+
+#board {
+  border-style: none;
+  /*border-color: white;*/
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  font-size: 140px;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+.score {
+  text-align: left;
+  border-color: white;
+  padding-left: 50px;
+  position: absolute;
+  top: 130px;
+  left: 5px;
+}
+
+.X{
+  top: 150px;
+}
+
+.O{
+  top: 170px;
+}
+
+
+.row-0, .row-1, .row-2 {
+  width: 600px;
+  border-color: white;
+  height: 200px;
+  border-style: dotted;
+  margin: 0 auto;
+  /*text-align: center;*/
+  display:flex;
+}
+
+.column {
+  width: 200px;
+  height: 200px;
+  border-color: white;
+  border-style: dotted;
+  display: inline-block;
+  /*margin: 0 auto;*/
+  /*text-align: center;*/
+
+}
+
+button {
+  width: 20.5%;
+}
+
+
+#playTwo {
+border: 2px  purple solid;
+}
+
+#computerMode {
+  font-size: 12px;
+}
+
+
+#mode {
+  text-align: center;
+  font-size: 12px;
+  margin:  0 auto;
+  /*margin-bottom: -5px;*/
+}
+
+#gameType {
+    text-align: center;
+    font-size: 12px;
+    margin:  0 auto;
+    /*margin-bottom: -5px;*/
+
+}
+
+img {
+  margin-right: 50px;
+}
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+}
+
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+.swingimage{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+#difficulty {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
