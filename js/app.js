@@ -5,6 +5,8 @@ $(function() {
     var turnSymbol = 'X';
     var Xwins = 0;
     var Owins = 0;
+    var compO = "O";
+    var compX = "X";
     var winner = "";
     var computerMode = false;
 
@@ -22,15 +24,15 @@ $(function() {
         }
     }
 
-
-
-
     // function to triggr two player mode to true
     $('#playComputer').click(function() {
         computerMode = true;
         $(this).css("border", "2px solid purple");
         $('#playTwo').css("border", "none");
         resetGame();
+        console.log(winner);
+
+
     });
 
     $('#playTwo').click(function() {
@@ -38,6 +40,7 @@ $(function() {
         $(this).css("border", "2px solid purple");
         $('#playComputer').css("border", "none");
         resetGame();
+        console.log(winner);
     });
 
 
@@ -74,6 +77,7 @@ $(function() {
         $(".inGame").css("display", "block");
         $("#board").css("display", "none");
         $(".inGame").addClass("swingimage");
+        winner ="";
     };
     // audio files for incorporation
     var audio = new Audio('media/win.mp3');
@@ -110,11 +114,16 @@ $(function() {
         var b8 = $('.row-2 .1').text();
         var b9 = $('.row-2 .2').text();
 
-        if (turnSymbol == "X") {
+        if (turnSymbol == "X" && computerMode === false)  {
             winner = "O";
-        } else {
+        } if (turnSymbol == "O" && computerMode === false)
             winner = "X";
+        if (turnSymbol == "X" && computerMode === true){
+            winner = "X";
+        } else if (turnSymbol == "O" && computerMode === true){
+            winner = "O";
         }
+
 
         if (b1 + b2 + b3 === "XXX" || b1 + b2 + b3 === "OOO") {
             displayWinner();
@@ -122,7 +131,7 @@ $(function() {
             showCup();
         }
         if (b1 + b4 + b7 === 'XXX' || b1 + b4 + b7 === "OOO") {
-             displayWinner();
+            displayWinner();
             audio.play();
             showCup();
         }
